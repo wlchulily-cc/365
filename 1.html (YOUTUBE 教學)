@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>LocksportHK</title>
+</head>
+<style>
+h1{color: chartreuse;}
+
+</style>
+<body>
+
+<a href="/"> 首頁</a>
+<a href="/Service.html"> 服務</a>
+<a href="https://www.google.com" target="blank" rel="noopener">Google</a>
+
+<p>P</p> 
+<h1>123</h1>
+<p>123</p>
+<img src="D:\鎖\網站\photo_6115948338068175149_y.jpg" alt="365logo" width="500" height="500">
+<br/>
+<img src="https://cdn.hk01.com/di/media/images/3866013/org/016f177c6c026e7b0c171c9924ef491c.jpg/rGdcskjQZ_3-Ew_Y1oyopjoRm1Bd78xk489rUuPPa1I?v=w960" alt="365logo" width="500" height="500" atl="馬會">
+
+<video controls width="640" height="360">
+<source src="ver3.mp4" type="video/webm">  <!-- 提供多種格式以提高相容性 -->
+</video>
+
+<iframe width="629" height="359" src="https://w ww.youtube.com/embed/aK85S6Uxjlo" title="🐇~1.5小時HTML+CSS真小白網站入門教學課程系列第10課 | 網頁中加入Youtube影片" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> <!-- remark-->
+</body>
+
+</html>

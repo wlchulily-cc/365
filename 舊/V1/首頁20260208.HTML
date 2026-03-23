@@ -1,0 +1,918 @@
+ <!DOCTYPE html>
+<html lang="zh-hk" class="auto" style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="24小時專業開鎖服務，快速開鎖、換鎖、維修鎖具，即時解決您的鎖具問題。">
+    <meta name="keywords" content="開鎖, 鎖匠, 換鎖, 壞鎖, 24小時開鎖, 開鎖佬, 緊急開鎖">
+    <title>365開鎖 - 24小時專業開鎖服務</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="" type="image/x-icon">
+   
+   <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Microsoft JhengHei', 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            padding-top: 125px; /* 調整為兩個導航欄的高度 */
+        }
+        
+        /* ===== 第一層導航欄 (頂部 - 聯絡信息) ===== */
+        .top-contact-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #2c3e50;
+            z-index: 2000;
+            padding: 10px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        /* 聯絡信息在左側 */
+        .contact-info {
+            display: flex;
+            align-items: center;
+            flex: 1;
+            color: white;
+            font-size: 0.95rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-right: 25px;
+        }
+        
+        .contact-item i {
+            margin-right: 8px;
+            color: #e74c3c;
+            font-size: 1rem;
+        }
+        
+        /* 社交媒體在中間 */
+        .contact-social {
+            display: flex;
+            justify-content: right;
+            align-items: right;
+            flex: 1;
+        }
+        
+        .social-icons-small {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-icon-small {
+            color: white;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            opacity: 0.8;
+        }
+        
+        .social-icon-small:hover {
+            color: #e74c3c;
+            opacity: 1;
+            transform: translateY(-2px);
+        }
+        
+        /* ===== 第二層導航欄 (主導航) ===== */
+        .main-nav {
+            position: fixed;
+            top: 45px; /* 在第一層導航欄下面 */
+            left: 0;
+            width: 100%;
+            background-color: white;
+            z-index: 1999;
+            padding: 0 30px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            border-bottom: 3px solid #e74c3c;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Logo在左側 */
+        .nav-logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-img {
+            height: 45px;
+            width: auto;
+            margin-right: 15px;
+            transition: transform 0.3s ease;
+        }
+        
+        .logo-img:hover {
+            transform: scale(1.05);
+        }
+        
+        .logo-text {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        .logo-subtext {
+            font-size: 0.8rem;
+            color: #7f8c8d;
+            margin-left: 10px;
+        }
+        
+        /* 導航菜單在中間 */
+        .main-menu {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            flex: 1;
+            justify-content: center;
+        }
+        
+        .main-menu li {
+            position: relative;
+        }
+        
+        .main-menu a {
+            display: block;
+            color: #333;
+            text-decoration: none;
+            padding: 20px 22px;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .main-menu a:hover {
+            color: #e74c3c;
+            background-color: #f8f9fa;
+        }
+        
+        .main-menu a.active {
+            color: #e74c3c;
+            font-weight: bold;
+            border-bottom: 3px solid #e74c3c;
+        }
+        
+        .main-menu a i {
+            margin-right: 8px;
+        }
+        
+        /* 文章連結特殊樣式 */
+        .article-link {
+            background-color: #3498db;
+            color: white !important;
+            border-radius: 4px;
+            margin: 10px 0 10px 15px;
+            padding: 12px 20px !important;
+        }
+        
+        .article-link:hover {
+            background-color: #2980b9 !important;
+            color: white !important;
+        }
+        
+        /* 電話號碼在右側 (只在第二層導航欄) */
+        .nav-phone {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        
+        .phone-box {
+            display: flex;
+            align-items: center;
+            background-color: #e74c3c;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
+            border: 2px solid #e74c3c;
+        }
+        
+        .phone-box:hover {
+            background-color: white;
+            color: #e74c3c;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(231, 76, 60, 0.4);
+        }
+        
+        .phone-icon {
+            margin-right: 10px;
+            font-size: 1.3rem;
+            animation: ring 2s infinite;
+        }
+        
+        @keyframes ring {
+            0%, 100% { transform: rotate(0); }
+            10%, 30%, 50%, 70%, 90% { transform: rotate(-10deg); }
+            20%, 40%, 60%, 80% { transform: rotate(10deg); }
+        }
+        
+        /* 移動端菜單切換 */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: #333;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 10px;
+        }
+        
+        /* Hero section with background image */
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                              url('./picture/backgorund.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: -125px; /* 抵消body的padding */
+        }
+        
+        .hero-content {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 50px;
+            border-radius: 15px;
+            max-width: 900px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            line-height: 1.8;
+        }
+        
+        .hero-phone {
+            display: inline-block;
+            background-color: #e74c3c;
+            color: white;
+            padding: 18px 50px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-top: 30px;
+            transition: all 0.3s ease;
+            border: 3px solid #e74c3c;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+        
+        .hero-phone:hover {
+            background-color: transparent;
+            border-color: white;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+        }
+        
+        /* Main content area */
+        .main-content {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-top: 4px solid #e74c3c;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .service-card h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+        
+        /* Article/News Preview Section */
+        .articles-preview {
+            margin: 60px 0;
+            padding: 40px;
+            background-color: #f8f9fa;
+            border-radius: 15px;
+            border-left: 5px solid #3498db;
+        }
+        
+        .articles-preview h2 {
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 2rem;
+        }
+        
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+        
+        .article-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .article-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .article-card-content {
+            padding: 25px;
+        }
+        
+        .article-card h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .article-card p {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .read-more {
+            display: inline-block;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        
+        .read-more:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+        
+        .view-all {
+            display: block;
+            text-align: center;
+            margin-top: 30px;
+            background-color: #3498db;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            transition: all 0.3s ease;
+        }
+        
+        .view-all:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0 30px;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 1024px) {
+            .top-contact-bar {
+                padding: 10px 20px;
+            }
+            
+            .contact-item {
+                margin-right: 15px;
+                font-size: 0.9rem;
+            }
+            
+            .main-menu a {
+                padding: 20px 18px;
+                font-size: 1rem;
+            }
+            
+            .logo-text {
+                font-size: 1.4rem;
+            }
+            
+            .phone-box {
+                padding: 10px 20px;
+                font-size: 1.1rem;
+            }
+        }
+        
+        @media (max-width: 900px) {
+            .top-contact-bar {
+                padding: 8px 15px;
+            }
+            
+            .contact-info {
+                display: none; /* 在移動端隱藏聯絡信息 */
+            }
+            
+            .contact-social {
+                justify-content: flex-start;
+                flex: none;
+            }
+            
+            .main-nav {
+                padding: 0 15px;
+            }
+            
+            .menu-toggle {
+                display: block;
+            }
+            
+            .main-menu {
+                position: fixed;
+                top: 105px; /* 在兩個導航欄下面 */
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                display: none;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+                z-index: 1998;
+            }
+            
+            .main-menu.active {
+                display: flex;
+            }
+            
+            .main-menu li {
+                width: 100%;
+                border-bottom: 1px solid #eee;
+            }
+            
+            .main-menu a {
+                padding: 15px 20px;
+            }
+            
+            .article-link {
+                margin: 0;
+                border-radius: 0;
+            }
+            
+            .logo-subtext {
+                display: none; /* 在移動端隱藏電話號碼 */
+            }
+            
+            
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding-top: 110px;
+            }
+            
+            .hero-bg {
+                margin-top: -110px;
+                min-height: 80vh;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+            
+            .hero-phone {
+                font-size: 1.4rem;
+                padding: 15px 35px;
+            }
+            
+            
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding-top: 100px;
+            }
+            
+            .top-contact-bar {
+                padding: 6px 10px;
+            }
+            
+            .logo-text {
+                font-size: 1.2rem;
+            }
+            
+            .logo-subtext {
+                display: none;
+            }
+            
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero-content {
+                padding: 30px 20px;
+            }
+            
+            .articles-preview {
+                padding: 25px 20px;
+            }
+        }
+        
+        /* 滾動時的動畫效果 */
+        .top-contact-bar.scrolled {
+            background-color: rgba(44, 62, 80, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        
+        .main-nav.scrolled {
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body>
+    <!-- ===== 第一層導航欄 (頂部 - 聯絡信息，無電話號碼) ===== -->
+    <div class="top-contact-bar" id="topContactBar">
+        <!-- 聯絡信息在左側 -->
+        <div class="contact-info">
+            <div class="contact-item">
+                <i class="fas fa-clock"></i>
+                <span>24小時服務</span>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>服務全港九新界</span>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <span>365locksmithhk@gmail.com</span>
+            </div>
+        </div>
+        
+        <!-- 社交媒體在中間 -->
+        <div class="contact-social">
+            <div class="social-icons-small">
+                <a href="https://www.facebook.com/share/1KYKwgAL7T/?mibextid=LQQJ4d" target="_blank" class="social-icon-small" title="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/365_locksmith_hk" target="_blank" class="social-icon-small" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/85256300365" target="_blank" class="social-icon-small" title="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+        
+        
+    </div>
+
+    <!-- ===== 第二層導航欄 (主導航，包含電話號碼) ===== -->
+    <nav class="main-nav" id="mainNav">
+        <div class="nav-container">
+            <!-- 移動端菜單切換 -->
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <!-- Logo在左側 -->
+            <div class="nav-logo">
+                <img src="https://static.wixstatic.com/media/1d8add_f352813f82ce4e8aaae31501778a1a4b~mv2.png/v1/fill/w_98,h_98,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/365%20Locksmith%20Logo.png" alt="365開鎖 Logo" class="logo-img">
+                <div>
+                    <span class="logo-text">365開鎖</span>
+                    <span class="logo-subtext">24小時專業開鎖</span>
+                </div>
+            </div>
+            
+            
+            <!-- 導航菜單在中間 -->
+            <ul class="main-menu" id="mainMenu">
+                <li><a href="index.html" class="active"><i class="fas fa-home"></i> 首頁</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> 服務地區</a></li>
+                <li><a href="services.html"><i class="fas fa-tools"></i> 服務項目</a></li>
+                <li><a href="pricing.html"><i class="fas fa-tag"></i> 價格表</a></li>
+                <li><a href="articles.html" class="article-link"><i class="fas fa-newspaper"></i> 開鎖知識/文章</a></li>
+                <li><a href="contact.html"><i class="fas fa-map-marker-alt"></i> 聯絡我們</a></li>
+            </ul>
+            
+            <!-- 電話號碼在右側 (只在第二層導航欄) -->
+            <div class="nav-phone">
+                <a href="tel:56300365
+                " class="phone-box">
+                    <span class="phone-icon"><i class="fas fa-phone-alt"></i></span>
+                    <span class="phone-text">5630 0365</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 移動端懸浮電話按鈕 -->
+    <a href="tel:56300365" class="mobile-phone-btn" id="mobilePhoneBtn">
+        <i class="fas fa-phone-alt"></i>
+    </a>
+
+    <!-- Hero Section with Background Image -->
+    <section class="hero-bg">
+        <div class="hero-content">
+            <h1>365開鎖 - 24小時專業開鎖服務</h1>
+            <p>快速、可靠、專業的開鎖服務，解決您所有鎖具問題。無論日夜，隨傳隨到！<br>
+            全港服務，30分鐘內到達，價格透明，絕無隱藏收費。</p>
+            <a href="tel:56300365" class="hero-phone">立即致電: 5630 0365</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <h2 style="text-align: center; margin-bottom: 40px; color: #2c3e50;">我們的服務</h2>
+        
+        <div class="services">
+            <div class="service-card">
+                <h3>🔓 緊急開鎖</h3>
+                <p>24小時上門開鎖服務，快速解決您被鎖門外的困境。</p>
+            </div>
+            
+            <div class="service-card">
+                <h3>🔧 換鎖服務</h3>
+                <p>專業換鎖、安裝各種門鎖、防盜鎖。</p>
+            </div>
+            
+            <div class="service-card">
+                <h3>🛠️ 電子鎖</h3>
+                <p>檢查維修電子鎖、機械鎖改電子鎖、新門安裝。</p>
+            </div>
+            
+            <div class="service-card">
+                <h3>🚗 汽車開鎖</h3>
+                <p>專業汽車開鎖，不損壞車身及車鎖。</p>
+            </div>
+            
+            <div class="service-card">
+                <h3>🏢 電鎖/門禁系統</h3>
+                <p>辦公室門禁系統安裝及維修服務。</p>
+            </div>
+            
+            <div class="service-card">
+                <h3>🔐 夾萬</h3>
+                <p>無損開啟夾萬/破壞性開啟夾萬。</p>
+            </div>
+        </div>
+        
+        <!-- ===== ARTICLES/NEWS PREVIEW SECTION ===== -->
+        <section class="articles-preview">
+            <h2><i class="fas fa-newspaper"></i> 最新開鎖知識與文章</h2>
+            <p style="text-align: center; margin-bottom: 30px; color: #666; font-size: 1.1rem;">
+                了解更多鎖具知識、安全提示及行業資訊
+            </p>
+            
+            <div class="article-grid">
+                <article class="article-card">
+                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="鎖具安全">
+                    <div class="article-card-content">
+                        <h3>一個危險的習慣:將鎖匙放在信箱內</h3>
+                        <p>大頭蝦，經常忙記帶鎖匙就將鎖匙放在信箱內...</p>
+                        <a href="articles.html#article1" class="read-more">閱讀更多 →</a>
+                    </div>
+                </article>
+                
+                <article class="article-card">
+                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="汽車開鎖">
+                    <div class="article-card-content">
+                        <h3>為何新居入伙需要更換鎖膽?</h3>
+                        <p>新居（無論是買樓、居屋、公屋、租樓還是二手樓）入伙前，通常有好多人有機會接觸過原裝鎖匙...</p>
+                        <a href="articles.html#article2" class="read-more">閱讀更多 →</a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="電子鎖">
+                    <div class="article-card-content">
+                        <h3>智能電子鎖的優缺點分析</h3>
+                        <p>智能電子鎖是否適合您？了解其優點、缺點及使用注意事項...</p>
+                        <a href="articles.html#article3" class="read-more">閱讀更多 →</a>
+                    </div>
+                </article><article class="article-card">
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="電子鎖">
+                    <div class="article-card-content">
+                        <h3>為何配匙時不應該將鎖匙配上配?</h3>
+                        <p>先了解什麼是配上配, 配上配的意思是將原裝鎖匙複製後(A匙)，再將鎖匙(A匙)複製成新鎖匙(B匙)...</p>
+                        <a href="articles.html#article4" class="read-more">閱讀更多 →</a>
+                    </div>
+                </article><article class="article-card">
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="電子鎖">
+                    <div class="article-card-content">
+                        <h3>智能電子鎖的優缺點分析</h3>
+                        <p>智能電子鎖是否適合您？了解其優點、缺點及使用注意事項...</p>
+                        <a href="articles.html#article3" class="read-more">閱讀更多 →</a>
+                    </div>
+                </article>
+                
+                <article class="article-card">
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="電子鎖">
+                    <div class="article-card-content">
+                        <h3>智能電子鎖的優缺點分析</h3>
+                        <p>智能電子鎖是否適合您？了解其優點、缺點及使用注意事項...</p>
+                        <a href="articles.html#article3" class="read-more">閱讀更多 →</a>
+                    </div>
+                </article>
+            </div>
+            
+            <a href="articles.html" class="view-all">
+                <i class="fas fa-book-open"></i> 瀏覽所有文章
+            </a>
+        </section>
+        
+        <div style="margin-top: 50px; background: #f8f9fa; padding: 40px; border-radius: 15px; border-left: 5px solid #e74c3c;">
+            <h3 style="color: #2c3e50; margin-bottom: 25px; font-size: 1.8rem;">服務承諾</h3>
+            <ul style="list-style: none; line-height: 2.2;">
+                <li>✅ <strong>24小時全天候服務</strong> - 最快15分鐘內到達</li>
+                <li>✅ <strong>價格透明</strong> - 絕無隱藏收費，報價後絕不追加</li>
+                <li>✅ <strong>專業鎖匠</strong> - 專業可靠，經驗豐富</li>
+                <li>✅ <strong>不破壞門鎖</strong> - 技術開鎖，無需破壞</li>
+                <li>✅ <strong>正式收據</strong> - 提供正式收據及保養服務</li>
+            </ul>
+        </div>
+        
+        <!-- Emergency Contact Section -->
+        <div style="margin-top: 60px; text-align: center; padding: 50px; background: linear-gradient(135deg, #e74c3c, #c0392b); color: white; border-radius: 20px; box-shadow: 0 10px 30px rgba(231, 76, 60, 0.3);">
+            <h2 style="margin-bottom: 20px; font-size: 2.2rem;">緊急開鎖熱線</h2>
+            <a href="tel:56300365" style="font-size: 3rem; color: white; text-decoration: none; font-weight: bold; display: block; margin: 25px 0; transition: transform 0.3s;">
+                <i class="fas fa-phone-alt"></i> 5630 0365
+            </a>
+            <p style="font-size: 1.3rem; opacity: 0.95;">24小時服務，隨傳隨到，全港服務</p>
+            <div class="footer-social" style="margin-top: 30px;">
+                <p style="margin-right: 20px;">關注我們:</p>
+                <a href="https://facebook.com/yourpage" target="_blank" style="color: white; font-size: 1.5rem; margin: 0 10px;">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://instagram.com/youraccount" target="_blank" style="color: white; font-size: 1.5rem; margin: 0 10px;">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <h3 style="font-size: 1.8rem; margin-bottom: 20px;">365開鎖</h3>
+        <p style="margin: 15px 0; font-size: 1.1rem;">📍 服務全港九新界</p>
+        <p style="margin: 15px 0; font-size: 1.1rem;">⏰ 24小時服務，全年無休</p>
+        <p style="margin: 25px 0;">
+            <a href="tel:56300365" style="color: #e74c3c; text-decoration: none; font-weight: bold; font-size: 1.5rem;">
+                <i class="fas fa-phone-alt"></i> 緊急熱線: 5630 0365
+            </a>
+        </p>
+        
+        <div class="footer-social">
+            <a href="https://facebook.com/yourpage" target="_blank" style="color: white; font-size: 1.5rem; margin: 0 15px;">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://instagram.com/youraccount" target="_blank" style="color: white; font-size: 1.5rem; margin: 0 15px;">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/85256300365" target="_blank" style="color: white; font-size: 1.5rem; margin: 0 15px;">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+        
+        <!-- Navigation in Footer -->
+        <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
+            <a href="index.html" style="color: #ccc; margin: 0 10px; text-decoration: none;">首頁</a> | 
+            <a href="about.html" style="color: #ccc; margin: 0 10px; text-decoration: none;">服務地區</a> | 
+            <a href="services.html" style="color: #ccc; margin: 0 10px; text-decoration: none;">服務項目</a> | 
+            <a href="articles.html" style="color: #3498db; margin: 0 10px; text-decoration: none; font-weight: bold;">開鎖知識</a> | 
+            <a href="contact.html" style="color: #ccc; margin: 0 10px; text-decoration: none;">聯絡我們</a>
+        </div>
+        
+        <p style="margin-top: 30px; font-size: 0.9em; opacity: 0.8;">©️ 2023 365開鎖佬 版權所有</p>
+    </footer>
+
+    <script>
+        // 移動端菜單切換
+        const menuToggle = document.getElementById('menuToggle');
+        const mainMenu = document.getElementById('mainMenu');
+        
+        menuToggle.addEventListener('click', function() {
+            mainMenu.classList.toggle('active');
+        });
+        
+        // 點擊外部時關閉移動端菜單
+        document.addEventListener('click', function(event) {
+            if (window.innerWidth <= 900) {
+                if (!mainMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+                    mainMenu.classList.remove('active');
+                }
+            }
+        });
+        
+        // 導航欄滾動效果
+        window.addEventListener('scroll', function() {
+            const topContactBar = document.getElementById('topContactBar');
+            const mainNav = document.getElementById('mainNav');
+            
+            if (window.scrollY > 50) {
+                topContactBar.classList.add('scrolled');
+                mainNav.classList.add('scrolled');
+            } else {
+                topContactBar.classList.remove('scrolled');
+                mainNav.classList.remove('scrolled');
+            }
+        });
+        
+        // 電話撥打跟踪
+        document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+            link.addEventListener('click', function() {
+                console.log('電話已撥打: ' + this.href);
+                // 可以添加 Google Analytics 或 Facebook Pixel 跟踪
+            });
+        });
+        
+        // 社交媒體點擊跟踪
+        document.querySelectorAll('.social-icon-small').forEach(icon => {
+            icon.addEventListener('click', function() {
+                console.log('Social media clicked: ' + this.title);
+            });
+        });
+        
+        // 顯示/隱藏移動端電話按鈕
+        function updateMobilePhoneButton() {
+            const mobilePhoneBtn = document.getElementById('mobilePhoneBtn');
+            if (window.innerWidth <= 900) {
+                mobilePhoneBtn.style.display = 'flex';
+            } else {
+                mobilePhoneBtn.style.display = 'none';
+            }
+        }
+        
+        // 初始化
+        updateMobilePhoneButton();
+        window.addEventListener('resize', updateMobilePhoneButton);
+    </script>
+</body>
+</html>
