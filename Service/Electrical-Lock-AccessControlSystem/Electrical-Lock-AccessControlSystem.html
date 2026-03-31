@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <!-- 主要SEO優化標籤 (更新為門禁系統主題) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="365開鎖｜門禁系統教室：簡單的刷卡/密碼門禁系統組成、原理、安裝須知。讀卡器、電控鎖、火牛、REX按鈕、互鎖設計全面拆解。香港門禁專家。">
+    <meta name="keywords" content="門禁系統, 電鎖, 讀卡器, 密碼鎖, 門禁控制器, 火牛, 電磁鎖, 電插鎖, 出門按鈕, 互鎖, AB門, 防尾隨, 電子鎖, 門禁安裝, 香港門禁, 365開鎖, 24小時開鎖, 56300365">
+    <meta name="author" content="365開鎖公司">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="365開鎖">
+    <meta name="twitter:title" content="365開鎖｜門禁系統教室 簡單的門禁系統組成">
+    <link rel="shortcut icon" href="/365開鎖/圖/LOGO/365-LOGO.jpg">
+
+    <!-- 結構化數據標記 (Schema.org) 保持不變 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "365開鎖公司",
+      "image": "https://static.wixstatic.com/media/1d8add_f352813f82ce4e8aaae31501778a1a4b~mv2.png/v1/fill/w_98,h_98,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/365%20Locksmith%20Logo.png",
+      "description": "香港24小時專業開鎖換鎖服務，專業鎖匠，15分鐘極速上門；門禁系統安裝維修專家",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "土瓜灣旭日街19號雅高工業大廈1212室",
+        "addressLocality": "香港",
+        "addressRegion": "九龍",
+        "postalCode": "999077",
+        "addressCountry": "HK"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 22.3193,
+        "longitude": 114.1694
+      },
+      "url": "https://locksmith365hk.com",
+      "telephone": "+852-56300365",
+      "openingHours": "Mo-Su 00:00-23:59",
+      "priceRange": "HKD$200起",
+      "sameAs": [
+        "https://www.facebook.com/share/17T6zh11LH",
+        "https://www.instagram.com/365_locksmith_hk",
+        "https://www.365locksmithhk.com.hk/"
+      ]
+    }
+    </script>
+    
+    <title>365開鎖 - 門禁系統教室 | 簡單的刷卡/密碼門禁系統組成</title>
+    
+    <!-- Open Graph 標籤 (微調) -->
+    <meta property="og:title" content="365開鎖 - 門禁系統教室 | 簡單的門禁系統組成與原理">
+    <meta property="og:description" content="辦公室常用門禁部件：讀卡器、火牛控制器、電鎖、出門按鈕、互鎖設計。24小時門禁安裝維修。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lock365.com">
+    <meta property="og:image" content="https://lock365.com/images/og-image.jpg">
+    
+    <!-- 網站圖標 -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <style>
+        /* ----- 全域樣式 (與原版一致，保留所有原有樣式) ----- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Microsoft JhengHei', 'Segoe UI', Arial, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333333;
+            background-color: #f5f5f5;
+            background-image: linear-gradient(to bottom, #f8f8f8, #f0f0f0);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* 頭部樣式 */
+        header {
+            background: linear-gradient(135deg, #3a3a3a 0%, #2c2c2c 100%);
+            color: #f5f5f5;
+            padding: 15px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            border-bottom: 2px solid #82b8ac;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .logo h1 {
+            font-size: 28px;
+            color: #f5f5f5;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+        
+        .logo p {
+            font-size: 14px;
+            color: #82b8ac;
+            margin-top: 2px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+        }
+        
+        nav ul li a {
+            color: #f5f5f5;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            padding: 8px 15px;
+            border-radius: 4px;
+            transition: all 0.3s;
+            border: 1px solid transparent;
+        }
+        
+        nav ul li a:hover {
+            background-color: rgba(130, 184, 172, 0.2);
+            border: 1px solid #82b8ac;
+        }
+        
+        /* 緊急聯繫欄 */
+        .emergency-bar {
+            background: linear-gradient(to right, #82b8ac, #6a9c92);
+            color: white;
+            text-align: center;
+            padding: 12px;
+            font-weight: bold;
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            border-bottom: 2px solid #558a7e;
+        }
+        
+        .emergency-bar span {
+            margin-right: 15px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        .emergency-bar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 22px;
+            border-radius: 30px;
+            margin: 5px;
+            display: inline-block;
+            transition: transform 0.3s, box-shadow 0.3s;
+            font-weight: 600;
+        }
+        
+        .emergency-bar a.phone {
+            background: linear-gradient(to right, #ff9800, #f57c00);
+            box-shadow: 0 3px 8px rgba(245, 124, 0, 0.4);
+        }
+        
+        .emergency-bar a.whatsapp {
+            background: linear-gradient(to right, #25D366, #1da851);
+            box-shadow: 0 3px 8px rgba(37, 211, 102, 0.4);
+        }
+        
+        .emergency-bar a:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 12px rgba(0,0,0,0.3);
+        }
+        
+        /* 浮動按鈕 */
+        .float-buttons {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .float-button {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            transition: all 0.3s;
+            color: white;
+            text-decoration: none;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+        
+        .float-button.whatsapp {
+            background: linear-gradient(135deg, #25D366, #1da851);
+        }
+        
+        .float-button.phone {
+            background: linear-gradient(135deg, #ff9800, #f57c00);
+        }
+        
+        .float-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+        }
+        
+        /* 英雄橫幅 */
+        .hero {
+            background: linear-gradient(rgba(58, 58, 58, 0.8), rgba(44, 44, 44, 0.8)), url('https://images.unsplash.com/photo-1558005530-a7958896ec60?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') no-repeat center center;
+            background-size: cover;
+            color: #f5f5f5;
+            padding: 100px 0;
+            text-align: center;
+            border-bottom: 3px solid #82b8ac;
+        }
+        
+        .hero h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #f5f5f5;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+        }
+        
+        .hero p {
+            font-size: 20px;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            color: #e0e0e0;
+            line-height: 1.7;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            color: white;
+            padding: 16px 38px;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s;
+            margin: 5px;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .cta-button.phone {
+            background: linear-gradient(to right, #ff9800, #f57c00);
+        }
+        
+        .cta-button.whatsapp {
+            background: linear-gradient(to right, #25D366, #1da851);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            color: #333333;
+            font-size: 32px;
+            position: relative;
+            font-weight: 700;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, #82b8ac, #6a9c92);
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+        
+        /* ----- 知識卡片基本樣式 (保留) ----- */
+        .knowledge-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 5px solid #82b8ac;
+            border: 1px solid #e0e0e0;
+            text-decoration: none;
+            display: block;
+            color: inherit;
+        }
+        
+        .knowledge-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .knowledge-image {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .knowledge-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .knowledge-card:hover .knowledge-image img {
+            transform: scale(1.05);
+        }
+        
+        .knowledge-image-overlay {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+            padding: 15px;
+        }
+        
+        .knowledge-image-tag {
+            display: inline-block;
+            background-color: #82b8ac;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .knowledge-content {
+            padding: 25px;
+        }
+        
+        .knowledge-content h3 {
+            color: #333333;
+            margin-bottom: 15px;
+            font-size: 22px;
+            font-weight: 600;
+        }
+        
+        .knowledge-content h4 {
+            color: #2c2c2c;
+            margin: 25px 0 10px;
+            font-size: 18px;
+            font-weight: 600;
+            border-left: 5px solid #82b8ac;
+            padding-left: 12px;
+        }
+        
+        .knowledge-content p {
+            color: #555555;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+        
+        .knowledge-meta {
+            display: flex;
+            justify-content: space-between;
+            color: #777777;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        
+        .knowledge-tag {
+            background-color: #e8f4fd;
+            color: #2c5282;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        /* 文章內嵌圖片樣式 */
+        .article-inline-img {
+            text-align: center;
+            margin: 25px 0;
+        }
+        
+        .article-inline-img img {
+            max-width: 100%;
+            width: auto;
+            height: auto;
+            max-height: 220px;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+            border: 1px solid #eaeaea;
+        }
+        
+        /* ----- 左側主圖片改為置中 (垂直堆疊) ----- */
+        .knowledge-full-article {
+            margin-top: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .knowledge-full-article .knowledge-card {
+            display: block;
+            width: 100%;
+            cursor: default;
+            border-top-width: 5px;
+            transition: box-shadow 0.3s;
+        }
+        
+        .knowledge-full-article .knowledge-image {
+            width: 100%;
+            height: auto;
+            max-height: none;
+            text-align: center;
+            margin-bottom: 30px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .knowledge-full-article .knowledge-image img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            width: auto;
+            height: auto;
+            max-height: 450px;
+            object-fit: contain;
+            border-radius: 12px;
+        }
+        
+        .knowledge-full-article .knowledge-image-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+            padding: 15px;
+        }
+        
+        .knowledge-full-article .knowledge-image-tag {
+            display: inline-block;
+            background-color: #82b8ac;
+            color: white;
+            padding: 5px 18px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .knowledge-full-article .knowledge-content {
+            padding: 0 25px 30px;
+        }
+        
+        .knowledge-full-article .knowledge-content h3 {
+            font-size: 26px;
+            color: #1e3a3a;
+            margin-bottom: 10px;
+        }
+        
+        @media (min-width: 992px) {
+            .knowledge-full-article .knowledge-image img {
+                max-width: 85%;
+            }
+            .knowledge-full-article .knowledge-image-overlay {
+                left: 7.5%;
+                width: 85%;
+                right: auto;
+            }
+        }
+        
+        /* ----- 按鈕置中容器 ----- */
+        .contact-buttons {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .contact-buttons .btn {
+            display: inline-block;
+            margin: 5px 8px;
+        }
+        
+        /* 聯繫我們 */
+        .contact {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #3a3a3a, #2c2c2c);
+            color: #f5f5f5;
+            border-top: 3px solid #82b8ac;
+        }
+        
+        .contact .section-title {
+            color: #f5f5f5;
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .contact-info h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #82b8ac;
+        }
+        
+        .contact-info ul {
+            list-style: none;
+        }
+        
+        .contact-info ul li {
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            color: #e0e0e0;
+        }
+        
+        .contact-info ul li .icon {
+            margin-right: 15px;
+            font-size: 20px;
+            color: #82b8ac;
+            width: 24px;
+            text-align: center;
+        }
+        
+        .contact-info ul li a {
+            color: #e0e0e0;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .contact-info ul li a:hover {
+            color: #82b8ac;
+        }
+        
+        /* 頁腳 */
+        footer {
+            background: linear-gradient(135deg, #2c2c2c, #1a1a1a);
+            color: #cccccc;
+            padding: 40px 0 20px;
+            border-top: 2px solid #82b8ac;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column h4 {
+            color: #82b8ac;
+            margin-bottom: 20px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .footer-column p {
+            color: #aaaaaa;
+            line-height: 1.7;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-column ul li a {
+            color: #cccccc;
+            text-decoration: none;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-column ul li a:hover {
+            color: #82b8ac;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 14px;
+            color: #888888;
+        }
+        
+        /* 更多文章按鈕 */
+        .more-articles-btn-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .more-articles-btn {
+            display: inline-block;
+            background-color: #82b8ac;
+            color: white;
+            padding: 14px 36px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(130, 184, 172, 0.3);
+            border: 2px solid #82b8ac;
+        }
+
+        .more-articles-btn:hover {
+            background-color: #6a9c92;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 18px rgba(130, 184, 172, 0.4);
+        }
+        
+        /* 響應式微調 */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav ul {
+                margin-top: 15px;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            nav ul li {
+                margin: 5px 8px;
+            }
+            .hero h2 {
+                font-size: 28px;
+            }
+            .hero p {
+                font-size: 18px;
+            }
+            .section-title {
+                font-size: 28px;
+            }
+            .emergency-bar {
+                flex-direction: column;
+            }
+            .emergency-bar span {
+                margin-bottom: 10px;
+                margin-right: 0;
+            }
+            .float-buttons {
+                bottom: 20px;
+                right: 20px;
+            }
+            .float-button {
+                width: 55px;
+                height: 55px;
+                font-size: 20px;
+            }
+            .cta-button {
+                display: block;
+                margin: 10px auto;
+                width: 90%;
+                max-width: 300px;
+            }
+            .knowledge-full-article .knowledge-content h3 {
+                font-size: 22px;
+            }
+            .knowledge-full-article .knowledge-image img {
+                max-width: 100%;
+            }
+            .contact-buttons .btn {
+                display: block;
+                margin: 10px auto;
+                max-width: 280px;
+            }
+        }
+
+        /* 方法卡片、對比表格樣式 (保留，用於門禁部件展示) */
+        .method-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .method-card {
+            background: #f8fbfa;
+            border-radius: 20px;
+            padding: 25px 15px;
+            border: 1px solid #c0ddd4;
+            box-shadow: 0 4px 10px rgba(130, 184, 172, 0.15);
+            flex: 1 1 280px;
+            transition: transform 0.2s;
+            text-align: left;
+        }
+        .method-card:hover {
+            transform: translateY(-5px);
+            background: #ffffff;
+            box-shadow: 0 10px 25px rgba(130, 184, 172, 0.25);
+        }
+        .method-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+            display: inline-block;
+            background: #82b8ac;
+            color: white;
+            width: 70px;
+            height: 70px;
+            line-height: 70px;
+            text-align: center;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .method-card h4 {
+            font-size: 22px;
+            color: #1e3a3a;
+            margin-bottom: 10px;
+            border-left: 5px solid #82b8ac;
+            padding-left: 12px;
+        }
+        /* 卡片內超連結樣式：繼承顏色、無下劃線，懸停時加底線 */
+        .method-card h4 a {
+            color: inherit;
+            text-decoration: none;
+            transition: text-decoration 0.2s;
+        }
+        .method-card h4 a:hover {
+            text-decoration: underline;
+        }
+        .method-card h5 {
+            font-size: 16px;
+            color: #2c5a5a;
+            margin: 15px 0 5px;
+            font-weight: 600;
+        }
+        .method-card p {
+            color: #3e5e5e;
+            font-size: 15px;
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+        .method-card ul {
+            margin-left: 20px;
+            color: #3e5e5e;
+            font-size: 14px;
+        }
+        .method-card li {
+            margin-bottom: 4px;
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .comparison-table th {
+            background: #82b8ac;
+            color: white;
+            padding: 12px;
+            font-weight: 600;
+        }
+        .comparison-table td {
+            padding: 12px;
+            border-bottom: 1px solid #e0f0ec;
+            vertical-align: top;
+        }
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+        .comparison-table tr:nth-child(even) {
+            background: #f9fdfc;
+        }
+    </style>
+</head>
+<body>
+    <!-- 緊急聯繫欄 (不變) -->
+    <div class="emergency-bar">
+        <span>24小時緊急開鎖・門禁安裝服務</span>
+        <a href="tel:+852-56300365" class="phone">📞 立即致電: 5630 0365</a>
+        <a href="https://chat.whatsapp.com/bjplyku4sbcgwpsmok5cyw" target="_blank" class="whatsapp">💬 WhatsApp聯絡</a>
+    </div>
+    
+    <!-- 網站頭部 (不變) -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="https://static.wixstatic.com/media/1d8add_500e1c6aa1d34b55a4477644a5471d94~mv2.jpg" alt="365開鎖公司標誌" style="height:70px; width:auto; border-radius:5px; border:2px solid #82b8ac; margin-right:10px;">
+                <div class="logo-text">
+                    <h1>&nbsp;365開鎖及安防有限公司</h1>
+                    <p>&nbsp;&nbsp;24小時專業開鎖・門禁系統專家</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">首頁</a></li>
+                    <li><a href="../365開鎖/Service/Service.html">服務項目</a></li>
+                    <li><a href="../365開鎖/article/Article.html">開鎖知識</a></li>
+                    <li><a href="/365開鎖/Service-area/Service-Area-HK.html">服務地區</a></li>
+                    <li><a href="../365開鎖/Advantages/Advantages.html">服務優勢</a></li>
+                    <li><a href="../365開鎖/Contact/Contact.html">聯絡我們</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- 浮動按鈕 (不變) -->
+    <div class="float-buttons">
+        <a href="tel:+852-56300365" class="float-button phone" aria-label="緊急聯絡電話">📞</a>
+        <a href="https://chat.whatsapp.com/BJplyKu4SBcGwpSMOK5cyW" target="_blank" class="float-button whatsapp" aria-label="WhatsApp聯絡">💬</a>
+    </div>
+    
+    <!-- 主橫幅 (背景圖改為門禁相關, 文字微調) -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h2>香港最可靠的門禁系統・電鎖專家</h2>
+            <p>365開鎖提供專業門禁系統安裝、維修、升級服務。無論是簡單的讀卡器、密碼鎖，還是AB門互鎖、防尾隨設計，我哋都能為你量身打造安全便捷的出入口方案。</p>
+            <a href="tel:+852-56300365" class="cta-button phone">📞 24小時緊急熱線: 5630 0365</a>
+            <a href="https://chat.whatsapp.com/bjplyku4sbcgwpsmok5cyw" target="_blank" class="cta-button whatsapp">💬 WhatsApp即時查詢</a>
+        </div>
+    </section>
+    <br>
+
+    <!-- ========= 門禁系統知識：簡單的門禁系統組成 ========= (原開鎖知識區塊完全改寫) -->
+    <section class="knowledge" id="knowledge">
+        <div class="container">
+            <h2 class="section-title">🔌 門禁系統教室・簡單的門禁系統</h2>
+            
+            <div class="knowledge-full-article">
+                <div class="knowledge-card">
+                    <!-- 主圖片：改為門禁讀卡器示意圖 -->
+                    <div class="knowledge-image">
+                        <img src="https://images.unsplash.com/photo-1558005530-a7958896ec60?ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80" 
+                             alt="門禁讀卡器 - 365開鎖" 
+                             loading="lazy"
+                             style="width: 80%; height: auto;">
+                        <div class="knowledge-image-overlay">
+                            <span class="knowledge-image-tag">🔐 門禁基礎架構</span>
+                        </div>
+                    </div>
+                    
+                    <div class="knowledge-content">
+                        <h3>【門禁系統基礎】刷卡/密碼門禁系統核心部件與運作原理</h3>
+                        <div class="knowledge-meta">
+                            <span>📅 更新：2025年3月</span>
+                            <span class="knowledge-tag">⚙️ 門禁知識</span>
+                        </div>
+                        
+                        <p style="font-weight: 500; color: #1e3a3a;">在辦公室、商舖或住宅大廈常見的刷卡/密碼門禁系統，主要由以下幾個核心部件組成。運作原理係透過識別憑證（卡、指紋、密碼）驗證身份，控制器判斷後發訊號控制電鎖解鎖。等我逐一拆解每個部件嘅功能。</p>
+                        
+                        <!-- 四大核心部件卡片 (已加入超連結) -->
+                        <div class="method-row">
+                            <!-- 1. 室外讀卡器 / Keypad 連結到 https://www.365locksmithhk.com.hk/ -->
+                            <div class="method-card">
+                                <div class="method-icon">📇</div>
+                                <h4><a href="https://www.365locksmithhk.com.hk/" target="_blank" rel="noopener noreferrer">室外讀卡器 <small style="font-size:14px; color:#4f7a7a;">(Reader / Keypad)</small></a></h4>
+                                <p><strong>功能：</strong>讀取用戶憑證，最常見包括RFID感應卡、密碼鍵盤、指紋掃描器或人臉辨識機。讀取資料後傳送給控制器驗證。</p>
+                                <h5>常見類型：</h5>
+                                <ul>
+                                    <li>RFID感應 (EM/Mifare)</li>
+                                    <li>密碼鍵盤 (數字輸入)</li>
+                                    <li>生物辨識 (指紋/人臉)</li>
+                                    <li>二合一/三合一讀頭</li>
+                                </ul>
+                                <h5>安裝位置：</h5>
+                                <p>門口外側，離地約1.4米，方便使用者操作。</p>
+                            </div>
+                            
+                            <!-- 2. 火牛 & 控制器 連結到 https://www.youtube.com/ -->
+                            <div class="method-card">
+                                <div class="method-icon">⚡</div>
+                                <h4><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">火牛 & 控制器 <small style="font-size:14px; color:#4f7a7a;">(Power Supply + Controller)</small></a></h4>
+                                <p><strong>功能：</strong>提供穩定電力（通常12V DC / 24V DC），控制器接收讀卡器訊號，判斷是否授權開門，並驅動電鎖。部分型號讀控一體。</p>
+                                <h5>要點：</h5>
+                                <ul>
+                                    <li>火牛功率需匹配電鎖數量</li>
+                                    <li>控制器可儲存用戶權限、紀錄進出</li>
+                                    <li>斷電後後備電池（選配）保持運作</li>
+                                </ul>
+                                <p>通常安裝在隱藏位置（天花內、弱電箱）。</p>
+                            </div>
+                            
+                            <!-- 3. 電控鎖 / 電鎖 連結到 https://www.365locksmithhk.com.hk/ -->
+                            <div class="method-card">
+                                <div class="method-icon">🔒</div>
+                                <h4><a href="https://www.365locksmithhk.com.hk/" target="_blank" rel="noopener noreferrer">電控鎖 <small style="font-size:14px; color:#4f7a7a;">(Electric Lock)</small></a></h4>
+                                <p><strong>功能：</strong>接收控制器訊號後解鎖。主要分兩大類：<strong>斷電開門</strong>（Fail-Safe）及<strong>供電開門</strong>（Fail-Secure）。</p>
+                                <h5>常見類型：</h5>
+                                <ul>
+                                    <li><strong>斷電開門</strong>：電磁鎖、電插鎖（適合防火門，緊急時斷電即解鎖）</li>
+                                    <li><strong>供電開門</strong>：陽極鎖、陰極鎖（有鎖匙孔，斷電時鎖上，適合防盜門）</li>
+                                </ul>
+                                <p>需配合門的材質及消防要求選擇。</p>
+                            </div>
+                            
+                            <!-- 4. 室內按鈕 (REX) 連結到 https://www.youtube.com/ -->
+                            <div class="method-card">
+                                <div class="method-icon">🚪</div>
+                                <h4><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">室內按鈕 <small style="font-size:14px; color:#4f7a7a;">(Exit Button / REX)</small></a></h4>
+                                <p><strong>功能：</strong>安裝在室內，按下即可從內開門外出，符合消防逃生要求（毋需驗證）。</p>
+                                <h5>種類：</h5>
+                                <ul>
+                                    <li>機械式按鈕 (細/大掣)</li>
+                                    <li>觸摸式 / 紅外線感應</li>
+                                    <li>帶指示燈型號</li>
+                                </ul>
+                                <h5>安裝要點：</h5>
+                                <p>高度約1.2米，確保緊急時容易觸及；可連動延時或警報。</p>
+                            </div>
+                        </div>
+                        
+                        <!-- 其他附加部件 (用列表方式) -->
+                        <h4 style="margin-top: 40px;">🧩 常見附加部件（按需求選配）</h4>
+                        <div style="display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 25px;">
+                            <div style="flex: 1 1 250px; background: #f2faf8; padding: 15px; border-radius: 16px;">
+                                <span style="font-size: 24px;">🔹</span> <strong>緊急玻璃掣</strong> (Emergency Break Glass)<br>用於斷電開門系統，安裝於室內，打破玻璃即時切斷電源解鎖，符合消防要求。
+                            </div>
+                            <div style="flex: 1 1 250px; background: #f2faf8; padding: 15px; border-radius: 16px;">
+                                <span style="font-size: 24px;">🔹</span> <strong>遙控開門器</strong> (Remote Control)<br>無線發射器，司機位或前台直接按掣開門，方便車輛出入或遠程授權。
+                            </div>
+                            <div style="flex: 1 1 250px; background: #f2faf8; padding: 15px; border-radius: 16px;">
+                                <span style="font-size: 24px;">🔹</span> <strong>門磁感應器</strong> (Door Contact)<br>偵測門是否關好或被強行開啟，可連動警報或通知管理軟件。
+                            </div>
+                            <div style="flex: 1 1 250px; background: #f2faf8; padding: 15px; border-radius: 16px;">
+                                <span style="font-size: 24px;">🔹</span> <strong>管理軟件</strong> (Management Software)<br>設定權限、定時開放、查看進出記錄，適合寫字樓/工廠多人管理。
+                            </div>
+                        </div>
+                        
+                        <!-- AB門互鎖設計介紹 -->
+                        <h4>🔄 高保安設計：AB門互鎖 (Interlock / Mantrap)</h4>
+                        <p>雙門互鎖又稱安全艙，常見於高保安區域（數據中心、實驗室、金庫）。結構由A門（外）和B門（內）組成，中間形成一個小空間。互鎖邏輯：兩扇門不能同時開啟，必須先關好一扇，另一扇才能解鎖。有效防止尾隨 (tailgating) 及強行闖入。</p>
+                        <div style="background: #ffffff; border: 1px dashed #82b8ac; padding: 15px; border-radius: 16px; margin: 15px 0;">
+                            <p style="margin: 0;"><strong>例如：</strong>從外進入 → 刷卡/驗證開A門 → 進入艙室 → A門自動關閉鎖上 → 再刷卡/驗證開B門 → 進入內部。兩門永遠不會同時打開，確保每次只有一人通過。</p>
+                        </div>
+                        
+                        <!-- 對比表格：斷電開門 vs 供電開門 -->
+                        <h4 style="margin-top: 40px;">⚡ 電鎖類型對比：斷電開門 vs 供電開門</h4>
+                        <table class="comparison-table">
+                            <thead>
+                                <tr><th>類型</th><th>運作方式</th><th>優點</th><th>常見產品</th><th>適用場景</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td><strong>斷電開門 (Fail-Safe)</strong></td><td>通電時上鎖，斷電時解鎖</td><td>火警斷電自動解鎖，安全逃生</td><td>電磁鎖、斷電開電插鎖</td><td>防火通道、逃生門、大廈主要出入口</td></tr>
+                                <tr><td><strong>供電開門 (Fail-Secure)</strong></td><td>通電時解鎖，斷電時上鎖</td><td>斷電後保持鎖上，防盜性強</td><td>陽極鎖、陰極鎖、馬達鎖</td><td>儲物室、機房、保險庫</td></tr>
+                            </tbody>
+                        </table>
+                        
+                        <!-- 專業建議區塊 (改為門禁安裝建議) -->
+                        <div style="background: #e9f3f0; padding: 20px; border-radius: 16px; margin: 25px 0; border-left: 8px solid #82b8ac;">
+                            <p style="margin-bottom: 0; color: #1e3a3a;"><strong>🔑 365開鎖・門禁專業建議：</strong><br>
+                            安裝門禁系統前，必須考慮門的材質、消防條例、出入人流及保安級別。我哋嘅經驗係：先了解客戶日常流程，再決定用斷電開門定供電開門，以及是否需要互鎖功能。此外，所有接線必須隱蔽穩固，火牛功率預留20%餘量，並加裝防雷/突波保護。如果你嘅辦公室需要新裝或升級門禁，歡迎直接搵我哋免費現場評估！</p>
+                        </div>
+                        
+                        <!-- 聯絡按鈕 (不變) -->
+                        <div class="contact-buttons">
+                            <a href="tel:+852-56300365" class="btn" style="font-size: 16px; background-color: #82b8ac; color: white; padding: 12px 28px; border-radius: 40px; border: none; display: inline-block; text-decoration: none;">📞 緊急即撥 5630 0365</a>
+                            <a href="https://chat.whatsapp.com/bjplyku4sbcgwpsmok5cyw" target="_blank" class="btn" style="font-size: 16px; background: #25D366; color: white; padding: 12px 28px; border-radius: 40px; border: none; display: inline-block; text-decoration: none;">💬 WhatsApp 查詢</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 瀏覽更多開鎖防盜知識按鈕 (可指向門禁文章列表，此處保留原連結) -->
+            <div class="more-articles-btn-container">
+                <a href="/365開鎖/article/Article.html" class="more-articles-btn" target="_blank" rel="noopener noreferrer">📚 瀏覽更多安防知識</a>
+            </div>
+        </div>
+    </section>
+    <br>
+
+    <!-- 聯繫我們 (不變) -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">聯絡我們</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>聯絡信息</h3>
+                    <ul>
+                        <li><span class="icon">📞</span> <a href="tel:+852-56300365" class="contact-link phone">24小時熱線: <strong>5630 0365</strong></a></li>
+                        <li><span class="icon whatsapp">💬</span> <a href="https://chat.whatsapp.com/bjplyku4sbcgwpsmok5cyw" target="_blank" class="contact-link whatsapp">WhatsApp: <strong>5630 0365</strong></a></li>
+                        <li><span class="icon">☎️</span> <a href="tel:+852-56300365" class="contact-link phone">辦公電話: <strong>5630 0365</strong></a></li>
+                        <li><span class="icon">✉️</span> <a href="mailto:365locksmithhk@gmail.com" class="contact-link email">電郵: 365locksmithhk@gmail.com</a></li>
+                        <li><span class="icon">📍</span> 地址: 土瓜灣旭日街19號雅高工業大廈1212室</li>
+                        <li><span class="icon">🕒</span> 服務時間: 24小時，全年無休</li>
+                    </ul>
+                </div>
+                <div class="contact-info">
+                    <h3>服務承諾</h3>
+                    <ul>
+                        <li><span class="icon">✅</span> 15-30分鐘快速上門</li>
+                        <li><span class="icon">✅</span> 服務前透明報價</li>
+                        <li><span class="icon">✅</span> 專業門禁規劃</li>
+                        <li><span class="icon">✅</span> 不破壞裝潢佈線</li>
+                        <li><span class="icon">✅</span> 提供售後保養</li>
+                        <li><span class="icon">✅</span> 支援WhatsApp即時查詢</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 頁腳 (不變，但可微調文字) -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h4>365開鎖公司</h4>
+                    <p>香港最專業可靠的開鎖及門禁公司，擁有10年以上行業經驗，持牌鎖匠及弱電技師團隊，為您提供安全、快速、高效的鎖具及門禁解決方案。</p>
+                </div>
+                <div class="footer-column">
+                    <h4>快速連結</h4>
+                    <ul>
+                        <li><a href="../index.html">🏠 首頁</a></li>
+                        <li><a href="../365開鎖/Service/Service.html">🛠️ 服務項目</a></li>
+                        <li><a href="../365開鎖/article/Article.html">📖 安防知識</a></li>
+                        <li><a href="../365開鎖/Service-area/Service-Area .html">📌 服務地區</a></li>
+                        <li><a href="../365開鎖/Contact/Contact.html">📞 聯絡我們</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>主要服務</h4>
+                    <ul>
+                        <li><a href="../365開鎖/Service/Emergency-unlock-service/Emergency-unlock-service.html">🔓 緊急開鎖</a></li>
+                        <li><a href="../365開鎖/Service/Electrical-Lock-Access Control System/Electrical-Lock-Access Control System.html">🏢 門禁系統安裝</a></li>
+                        <li><a href="../365開鎖/Service/Car-Unlock-Service.html/Car-Unlock-Service.html">🚘 汽車開鎖</a></li>
+                        <li><a href="../365開鎖/Service/Digital-Lock/Digital-Lock.html">🔋 電子鎖安裝</a></li>
+                        <li><a href="../365開鎖/Service/Safebox/Safebox.html">🗃️ 夾萬開鎖</a></li>
+                    </ul>
+                </div>
+                <!-- 關注我們：使用原始圖片路徑 -->
+                <div class="footer-column">
+                    <h4>關注我們</h4>
+                    <ul>
+                        <li><a href="https://www.facebook.com/share/17T6zh11LH" target="_blank">
+                            <img src="/365開鎖/圖/LOGO/FB-LOGO.png" alt="Facebook" width="23" height="23" style="margin-right:8px;"> Facebook
+                        </a></li>
+                        <li><a href="https://www.instagram.com/365_locksmith_hk" target="_blank">
+                            <img src="/365開鎖/圖/LOGO/IG-LOGO.png" alt="Instagram" width="20" height="20" style="margin-right:8px;"> Instagram
+                        </a></li>
+                        <li><a href="https://www.youtube.com/@365locksmithhk" target="_blank">
+                            <img src="/365開鎖/圖/LOGO/YT-LOGO.png" alt="YouTube" width="20" height="20" style="margin-right:8px;"> YouTube
+                        </a></li>
+                        <li><a href="https://chat.whatsapp.com/bjplyku4sbcgwpsmok5cyw" target="_blank">
+                            <img src="/365開鎖/圖/LOGO/WA-LOGO.png" alt="WhatsApp" width="25" height="25" style="margin-right:8px;"> WhatsApp
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>©️ 2019-2025 365<strong>開鎖</strong>公司版權所有。 | 香港鎖匠・門禁專家 | 防盜知識・專業門禁系統</p>
+                <p style="margin-top: 10px; font-size: 12px;">本網站內容僅供參考，實際服務以現場評估為準。緊急情況請直接致電24小時熱線或使用WhatsApp聯絡。</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // 平滑滾動 (保留)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({ top: targetElement.offsetTop - 80, behavior: 'smooth' });
+                }
+            });
+        });
+        
+        // 電話/WhatsApp點擊記錄 (保留)
+        const contactBtns = document.querySelectorAll('a[href^="tel:"], a[href*="whatsapp"], a[href*="wa.me"]');
+        contactBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const type = this.href.includes('whatsapp') || this.href.includes('wa.me') ? 'WhatsApp' : '電話';
+                console.log(`用戶透過${type}聯繫365開鎖`);
+            });
+        });
+        
+        // 知識卡片不跳轉 (保留)
+        const card = document.querySelector('.knowledge-full-article .knowledge-card');
+        if(card) {
+            card.addEventListener('click', function(e) {
+                if(e.target.tagName === 'A' || e.target.closest('a')) return;
+                e.preventDefault();
+            });
+        }
+    </script>
+</body>
+</html>
